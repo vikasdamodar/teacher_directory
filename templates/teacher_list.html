@@ -40,12 +40,6 @@ table, th, td {
     </form>
     {% else %}
     <h3> Login User: None </h3>
-    <form method="POST" class="post-form" enctype="multipart/form-data">
-        {% csrf_token %}
-        Bulk Import Teachers
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Submit</button>
-    </form>
     {% endif %}
     </br>
     <table>
