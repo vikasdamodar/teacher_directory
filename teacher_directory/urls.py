@@ -26,6 +26,7 @@ router = routers.DefaultRouter()
 router.register('teachers-rest', TeachersViewSet, basename="teachers-rest")
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('api/', include(router.urls)),
     path('api-token-auth/', views.obtain_auth_token, name='api-token-auth'),
     path('teachers/', TeachersView.as_view(), name="teachers-list"),
