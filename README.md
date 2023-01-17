@@ -28,6 +28,7 @@ The project requirements can be installed
     
     - Open http://localhost:8000/teachers/ to see the list of teachers
     - Options for Teacher profile and bulk import are include the same template page
+    - Users can be login using username and password (create via admin page) and logout already login users.
     
     # Django Rest API
     
