@@ -31,7 +31,7 @@ table, th, td {
     </ul>
     {% else %}
     {% if user.is_authenticated %}
-    <h3> Login User: {{ user.username }} </h3>
+    <h3> Login User: {{ user.username }} <a href="{% url 'logout' %}">Log Out</a> </h3>
     <form method="POST" class="post-form" enctype="multipart/form-data">
         {% csrf_token %}
         Bulk Import Teachers
@@ -39,7 +39,8 @@ table, th, td {
         <button type="submit" class="save btn btn-default">Submit</button>
     </form>
     {% else %}
-    <h3> Login User: None </h3>
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a>
     {% endif %}
     </br>
     <table>
